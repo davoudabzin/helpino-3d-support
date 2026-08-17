@@ -476,9 +476,8 @@ const callCenterServices = [
 
 function CallCenter() {
   return (
-    <section id="call-center" className="relative isolate overflow-hidden py-24">
-      <div className="absolute inset-0 -z-10 surface-navy" aria-hidden />
-      <div
+    <section id="call-center" className="relative isolate overflow-hidden surface-navy py-24">
+            <div
         className="bg-grid absolute inset-0 -z-10 opacity-20 mix-blend-overlay"
         aria-hidden
       />
@@ -664,9 +663,8 @@ function TechSupport() {
 
 function RemoteSupport() {
   return (
-    <section className="relative isolate overflow-hidden py-24">
-      <div className="absolute inset-0 -z-10 surface-navy" aria-hidden />
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    <section className="relative isolate overflow-hidden surface-navy py-24">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionTitle
           dark
           overline="Remote Support"
@@ -770,9 +768,8 @@ const steps = [
 
 function HowItWorks() {
   return (
-    <section id="process" className="relative isolate overflow-hidden py-24">
-      <div className="absolute inset-0 -z-10 surface-navy" aria-hidden />
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    <section id="process" className="relative isolate overflow-hidden surface-navy py-24">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionTitle
           dark
           overline="How it works"
@@ -917,9 +914,8 @@ const kpis = [
 
 function DashboardTech() {
   return (
-    <section className="relative isolate overflow-hidden py-24">
-      <div className="absolute inset-0 -z-10 surface-navy" aria-hidden />
-      <div className="bg-grid absolute inset-0 -z-10 opacity-20 mix-blend-overlay" aria-hidden />
+    <section className="relative isolate overflow-hidden surface-navy py-24">
+            <div className="bg-grid absolute inset-0 -z-10 opacity-20 mix-blend-overlay" aria-hidden />
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionTitle
           dark
@@ -1045,9 +1041,8 @@ function Faq() {
 
 function FinalCta() {
   return (
-    <section id="contact" className="relative isolate overflow-hidden py-28">
-      <div className="absolute inset-0 -z-10 surface-navy" aria-hidden />
-      <img
+    <section id="contact" className="relative isolate overflow-hidden surface-navy py-28">
+            <img
         src={callCenterImg}
         alt=""
         aria-hidden
