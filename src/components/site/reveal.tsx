@@ -22,7 +22,7 @@ export function Reveal({
           io.disconnect();
         }
       },
-      { threshold: 0.15 },
+      { threshold: 0, rootMargin: "0px 0px -40px 0px" },
     );
     io.observe(el);
     return () => io.disconnect();
@@ -70,7 +70,7 @@ export function CountUp({
         };
         requestAnimationFrame(tick);
       },
-      { threshold: 0.4 },
+      { threshold: 0 },
     );
     io.observe(el);
     return () => io.disconnect();
