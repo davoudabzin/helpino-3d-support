@@ -476,7 +476,7 @@ const callCenterServices = [
 
 function CallCenter() {
   return (
-    <section id="call-center" className="relative overflow-hidden py-24">
+    <section id="call-center" className="relative isolate overflow-hidden py-24">
       <div className="absolute inset-0 -z-10 [background-image:var(--gradient-navy)]" aria-hidden />
       <div
         className="bg-grid absolute inset-0 -z-10 opacity-20 mix-blend-overlay"
@@ -664,7 +664,7 @@ function TechSupport() {
 
 function RemoteSupport() {
   return (
-    <section className="relative overflow-hidden py-24">
+    <section className="relative isolate overflow-hidden py-24">
       <div className="absolute inset-0 -z-10 [background-image:var(--gradient-navy)]" aria-hidden />
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionTitle
@@ -770,7 +770,7 @@ const steps = [
 
 function HowItWorks() {
   return (
-    <section id="process" className="relative overflow-hidden py-24">
+    <section id="process" className="relative isolate overflow-hidden py-24">
       <div className="absolute inset-0 -z-10 [background-image:var(--gradient-navy)]" aria-hidden />
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionTitle
@@ -917,7 +917,7 @@ const kpis = [
 
 function DashboardTech() {
   return (
-    <section className="relative overflow-hidden py-24">
+    <section className="relative isolate overflow-hidden py-24">
       <div className="absolute inset-0 -z-10 [background-image:var(--gradient-navy)]" aria-hidden />
       <div className="bg-grid absolute inset-0 -z-10 opacity-20 mix-blend-overlay" aria-hidden />
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -1045,7 +1045,7 @@ function Faq() {
 
 function FinalCta() {
   return (
-    <section id="contact" className="relative overflow-hidden py-28">
+    <section id="contact" className="relative isolate overflow-hidden py-28">
       <div className="absolute inset-0 -z-10 [background-image:var(--gradient-navy)]" aria-hidden />
       <img
         src={callCenterImg}
