@@ -174,7 +174,7 @@ function Cta({
     "group inline-flex items-center justify-center gap-2 rounded-2xl px-7 py-3.5 text-sm font-bold transition-all duration-300 active:scale-[0.97]";
   const styles = {
     primary:
-      "text-primary-foreground shadow-[var(--shadow-float)] hover:-translate-y-1 hover:shadow-[var(--shadow-glow)] [background-image:var(--gradient-primary)]",
+      "text-primary-foreground shadow-[var(--shadow-float)] hover:-translate-y-1 hover:shadow-[var(--shadow-glow)] surface-primary",
     ghost:
       "glass text-foreground hover:-translate-y-1 hover:text-primary hover:shadow-[var(--shadow-glow)]",
     light:
@@ -228,7 +228,7 @@ function Header() {
       <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-3.5 sm:px-6">
         <a href="#" className="flex min-w-0 items-center gap-3">
           <span
-            className="grid size-11 shrink-0 place-items-center rounded-2xl text-primary-foreground shadow-[var(--shadow-float)] [background-image:var(--gradient-primary)]"
+            className="grid size-11 shrink-0 place-items-center rounded-2xl text-primary-foreground shadow-[var(--shadow-float)] surface-primary"
             aria-hidden
           >
             <Headset className="size-5" />
@@ -254,7 +254,7 @@ function Header() {
           </nav>
           <a
             href="#contact"
-            className="inline-flex shrink-0 items-center gap-2 rounded-2xl px-5 py-2.5 text-sm font-bold text-primary-foreground shadow-[var(--shadow-float)] transition-transform hover:-translate-y-0.5 [background-image:var(--gradient-primary)]"
+            className="inline-flex shrink-0 items-center gap-2 rounded-2xl px-5 py-2.5 text-sm font-bold text-primary-foreground shadow-[var(--shadow-float)] transition-transform hover:-translate-y-0.5 surface-primary"
           >
             <Phone className="size-4" />
             <span className="hidden sm:inline">درخواست پشتیبانی</span>
@@ -271,7 +271,7 @@ function Hero() {
     <section className="relative isolate overflow-hidden">
       <div className="bg-grid absolute inset-0 -z-10 opacity-70" aria-hidden />
       <div
-        className="absolute -top-40 right-[-10%] -z-10 size-[38rem] rounded-full opacity-45 blur-3xl [background-image:var(--gradient-primary)]"
+        className="absolute -top-40 right-[-10%] -z-10 size-[38rem] rounded-full opacity-45 blur-3xl surface-primary"
         aria-hidden
       />
       <div
@@ -394,7 +394,7 @@ function Trust() {
                 className="card-3d glass group h-full rounded-[1.75rem] p-7"
                 style={{ perspective: "900px" }}
               >
-                <span className="grid size-14 place-items-center rounded-2xl text-primary-foreground shadow-[var(--shadow-float)] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6 [background-image:var(--gradient-primary)]">
+                <span className="grid size-14 place-items-center rounded-2xl text-primary-foreground shadow-[var(--shadow-float)] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6 surface-primary">
                   <c.icon className="size-6" />
                 </span>
                 <h3 className="mt-6 text-lg font-extrabold">{c.t}</h3>
@@ -477,7 +477,7 @@ const callCenterServices = [
 function CallCenter() {
   return (
     <section id="call-center" className="relative isolate overflow-hidden py-24">
-      <div className="absolute inset-0 -z-10 [background-image:var(--gradient-navy)]" aria-hidden />
+      <div className="absolute inset-0 -z-10 surface-navy" aria-hidden />
       <div
         className="bg-grid absolute inset-0 -z-10 opacity-20 mix-blend-overlay"
         aria-hidden
@@ -559,7 +559,7 @@ function MultiChannel() {
               aria-hidden
             />
             <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
-              <div className="relative grid size-32 place-items-center rounded-full text-center text-primary-foreground shadow-[var(--shadow-glow)] sm:size-40 [background-image:var(--gradient-primary)]">
+              <div className="relative grid size-32 place-items-center rounded-full text-center text-primary-foreground shadow-[var(--shadow-glow)] sm:size-40 surface-primary">
                 <span
                   className="absolute inset-0 animate-pulse-ring rounded-full bg-primary/40"
                   aria-hidden
@@ -665,7 +665,7 @@ function TechSupport() {
 function RemoteSupport() {
   return (
     <section className="relative isolate overflow-hidden py-24">
-      <div className="absolute inset-0 -z-10 [background-image:var(--gradient-navy)]" aria-hidden />
+      <div className="absolute inset-0 -z-10 surface-navy" aria-hidden />
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionTitle
           dark
@@ -688,10 +688,10 @@ function RemoteSupport() {
 
             <div className="relative mx-auto flex h-24 w-full items-center justify-center md:h-40 md:w-40">
               <div
-                className="h-[3px] w-full rounded-full [background-image:var(--gradient-primary)] md:h-full md:w-[3px]"
+                className="h-[3px] w-full rounded-full surface-primary md:h-full md:w-[3px]"
                 aria-hidden
               />
-              <span className="absolute grid size-14 place-items-center rounded-full text-primary-foreground shadow-[var(--shadow-glow)] [background-image:var(--gradient-primary)]">
+              <span className="absolute grid size-14 place-items-center rounded-full text-primary-foreground shadow-[var(--shadow-glow)] surface-primary">
                 <span className="absolute inset-0 animate-pulse-ring rounded-full bg-primary/50" />
                 <ShieldCheck className="relative size-6" />
               </span>
@@ -746,7 +746,7 @@ function WhyUs() {
                   className="absolute -left-10 -top-10 size-28 rounded-full bg-primary/10 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
                   aria-hidden
                 />
-                <span className="grid size-14 place-items-center rounded-2xl text-primary-foreground shadow-[var(--shadow-float)] transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110 [background-image:var(--gradient-primary)]">
+                <span className="grid size-14 place-items-center rounded-2xl text-primary-foreground shadow-[var(--shadow-float)] transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110 surface-primary">
                   <c.icon className="size-6" />
                 </span>
                 <h3 className="mt-6 text-lg font-extrabold">{c.t}</h3>
@@ -771,7 +771,7 @@ const steps = [
 function HowItWorks() {
   return (
     <section id="process" className="relative isolate overflow-hidden py-24">
-      <div className="absolute inset-0 -z-10 [background-image:var(--gradient-navy)]" aria-hidden />
+      <div className="absolute inset-0 -z-10 surface-navy" aria-hidden />
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionTitle
           dark
@@ -782,14 +782,14 @@ function HowItWorks() {
 
         <div className="relative mt-16">
           <div
-            className="absolute inset-x-0 top-[3.25rem] hidden h-[2px] [background-image:var(--gradient-primary)] lg:block"
+            className="absolute inset-x-0 top-[3.25rem] hidden h-[2px] surface-primary lg:block"
             aria-hidden
           />
           <ol className="grid gap-6 lg:grid-cols-5">
             {steps.map((s, i) => (
               <Reveal key={s.t} delay={i * 110}>
                 <li className="relative flex h-full flex-col items-center text-center">
-                  <span className="relative z-10 grid size-[4.5rem] place-items-center rounded-3xl text-lg font-black text-primary-foreground shadow-[var(--shadow-glow)] [background-image:var(--gradient-primary)]">
+                  <span className="relative z-10 grid size-[4.5rem] place-items-center rounded-3xl text-lg font-black text-primary-foreground shadow-[var(--shadow-glow)] surface-primary">
                     {(i + 1).toLocaleString("fa-IR")}
                   </span>
                   <div className="glass-dark mt-5 w-full flex-1 rounded-[1.5rem] p-6">
@@ -918,7 +918,7 @@ const kpis = [
 function DashboardTech() {
   return (
     <section className="relative isolate overflow-hidden py-24">
-      <div className="absolute inset-0 -z-10 [background-image:var(--gradient-navy)]" aria-hidden />
+      <div className="absolute inset-0 -z-10 surface-navy" aria-hidden />
       <div className="bg-grid absolute inset-0 -z-10 opacity-20 mix-blend-overlay" aria-hidden />
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionTitle
@@ -1046,7 +1046,7 @@ function Faq() {
 function FinalCta() {
   return (
     <section id="contact" className="relative isolate overflow-hidden py-28">
-      <div className="absolute inset-0 -z-10 [background-image:var(--gradient-navy)]" aria-hidden />
+      <div className="absolute inset-0 -z-10 surface-navy" aria-hidden />
       <img
         src={callCenterImg}
         alt=""
@@ -1112,7 +1112,7 @@ function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-3">
-              <span className="grid size-11 shrink-0 place-items-center rounded-2xl text-primary-foreground shadow-[var(--shadow-float)] [background-image:var(--gradient-primary)]">
+              <span className="grid size-11 shrink-0 place-items-center rounded-2xl text-primary-foreground shadow-[var(--shadow-float)] surface-primary">
                 <Headset className="size-5" />
               </span>
               <span>

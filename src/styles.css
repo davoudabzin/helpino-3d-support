@@ -239,3 +239,10 @@
     transition-duration: 0.001ms !important;
   }
 }
+
+@utility surface-navy {
+  background-image: var(--gradient-navy);
+}
+@utility surface-primary {
+  background-image: var(--gradient-primary);
+}
