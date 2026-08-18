@@ -58,13 +58,24 @@ function ServicePage() {
             </span>
             <span className="text-base font-extrabold">هلپینو ۲۴</span>
           </Link>
-          <Link
-            to="/services"
-            className="inline-flex items-center gap-2 rounded-2xl glass px-4 py-2 text-sm font-bold text-primary"
-          >
-            همه خدمات
-            <ArrowLeft className="size-4" />
-          </Link>
+          <div className="flex items-center gap-2">
+            <Link
+              to="/"
+              hash="contact"
+              className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 text-sm font-bold text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:-translate-y-0.5 surface-primary"
+            >
+              <Phone className="size-4" />
+              درخواست پشتیبانی
+            </Link>
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-2 rounded-2xl glass px-4 py-2 text-sm font-bold text-primary"
+            >
+              همه خدمات
+              <ArrowLeft className="size-4" />
+            </Link>
+          </div>
+
         </div>
       </header>
 
