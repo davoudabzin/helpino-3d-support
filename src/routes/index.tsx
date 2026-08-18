@@ -192,7 +192,7 @@ function Cta({
 
 function Home() {
   return (
-    <div className="overflow-x-hidden bg-background text-foreground">
+    <div id="top" className="overflow-x-hidden bg-background text-foreground">
       <Header />
       <main>
         <Hero />
@@ -433,7 +433,7 @@ function Trust() {
 
 function Intro() {
   return (
-    <section className="py-20 sm:py-24">
+    <section id="about" className="py-20 sm:py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2">
         <Reveal>
           <span className="inline-block rounded-full glass px-4 py-1.5 text-xs font-semibold text-primary">
@@ -944,7 +944,7 @@ function DashboardTech() {
           dark
           overline="تکنولوژی"
           title="داشبورد زنده مرکز تماس هلپینو ۲۴"
-          desc="عملکرد تیم پشتیبانی شما لحظه‌به‌لحظه اندازه‌گیری و گزارش می‌شود."
+          desc="نمونه‌ای از داشبورد پایش عملکرد (Demo UI) — اعداد نمایشی هستند و صرفاً برای معرفی قابلیت‌های گزارش‌گیری آورده شده‌اند."
         />
         <div className="mt-14 grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
           <Reveal>
