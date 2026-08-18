@@ -927,13 +927,16 @@ function Industries() {
 }
 
 const kpis = [
-  { t: "Live Calls", fa: "تماس‌های زنده", v: 128, s: "" },
+  { t: "Active Calls", fa: "تماس‌های در حال مکالمه", v: 128, s: "" },
+  { t: "Waiting Calls", fa: "تماس‌های در صف انتظار", v: 7, s: "" },
   { t: "Active Agents", fa: "کارشناسان فعال", v: 64, s: "" },
-  { t: "Tickets", fa: "تیکت‌های امروز", v: 942, s: "" },
-  { t: "Response Time", fa: "زمان پاسخ (ثانیه)", v: 27, s: "" },
+  { t: "Average Response Time", fa: "میانگین زمان پاسخ (ثانیه)", v: 27, s: "" },
+  { t: "Open Tickets", fa: "تیکت‌های باز", v: 86, s: "" },
+  { t: "Resolved Tickets", fa: "تیکت‌های حل‌شده امروز", v: 942, s: "" },
+  { t: "Resolved Requests", fa: "درخواست‌های حل‌شده (ماه)", v: 15400, s: "+" },
   { t: "Customer Satisfaction", fa: "رضایت مشتری", v: 98, s: "٪" },
-  { t: "Resolved Requests", fa: "درخواست‌های حل‌شده", v: 15400, s: "+" },
 ];
+
 
 function DashboardTech() {
   return (
