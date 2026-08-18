@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, Headset } from "lucide-react";
+import { ArrowLeft, Headset, Phone } from "lucide-react";
 import { services } from "@/data/services";
 
 export const Route = createFileRoute("/services/")({
@@ -55,10 +55,8 @@ function ServicesIndex() {
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((s) => (
-            <Link
+            <div
               key={s.slug}
-              to="/services/$slug"
-              params={{ slug: s.slug }}
               className="group flex h-full flex-col rounded-[1.75rem] border border-border/70 bg-card p-6 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-[var(--shadow-glow)]"
             >
               <span className="grid size-12 place-items-center rounded-2xl bg-primary/10 text-primary">
@@ -66,12 +64,29 @@ function ServicesIndex() {
               </span>
               <h2 className="mt-5 text-base font-extrabold leading-7">{s.title}</h2>
               <p className="mt-3 grow text-sm leading-7 text-muted-foreground">{s.short}</p>
-              <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-primary">
-                مشاهده خدمت
-                <ArrowLeft className="size-4 transition-transform duration-300 group-hover:-translate-x-1" />
-              </span>
-            </Link>
+              <div className="mt-6 flex flex-col gap-2">
+                <Link
+                  to="/services/$slug"
+                  params={{ slug: s.slug }}
+                  aria-label={`مشاهده خدمت ${s.title}`}
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-bold text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:-translate-y-0.5 surface-primary"
+                >
+                  مشاهده خدمت
+                  <ArrowLeft className="size-4 transition-transform duration-300 group-hover:-translate-x-1" />
+                </Link>
+                <Link
+                  to="/"
+                  hash="contact"
+                  aria-label={`درخواست پشتیبانی برای ${s.title}`}
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-primary/30 bg-primary/5 px-4 py-2.5 text-sm font-bold text-primary transition-colors hover:bg-primary/10"
+                >
+                  <Phone className="size-4" />
+                  درخواست پشتیبانی
+                </Link>
+              </div>
+            </div>
           ))}
+
         </div>
       </main>
     </div>
