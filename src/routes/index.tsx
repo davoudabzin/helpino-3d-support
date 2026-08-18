@@ -196,6 +196,8 @@ function Home() {
         <Hero />
         <Trust />
         <Intro />
+        <ServicesSection />
+
         <CallCenter />
         <MultiChannel />
         <TechSupport />
@@ -215,12 +217,15 @@ function Home() {
 }
 
 const nav = [
+  { label: "خانه", href: "#top" },
+  { label: "خدمات", href: "#services" },
   { label: "مرکز تماس", href: "#call-center" },
   { label: "پشتیبانی فنی", href: "#technical" },
-  { label: "کسب‌وکارها", href: "#business" },
-  { label: "فرایند کار", href: "#process" },
-  { label: "سوالات", href: "#faq" },
+  { label: "پشتیبانی کسب‌وکارها", href: "#business" },
+  { label: "درباره ما", href: "#about" },
+  { label: "تماس با ما", href: "#contact" },
 ];
+
 
 function Header() {
   return (
