@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Accordion,
   AccordionContent,
@@ -6,6 +6,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Reveal, CountUp } from "@/components/site/reveal";
+import { ServicesSection } from "@/components/site/services-section";
+
 import heroImg from "@/assets/hero-callcenter.png";
 import callCenterImg from "@/assets/callcenter-scene.png";
 import techImg from "@/assets/tech-support.png";
@@ -55,17 +57,22 @@ const faqs = [
     a: "پس از ثبت درخواست، کارشناس با شما تماس می‌گیرد و از طریق یک اتصال امن Remote، دستگاه شما را بررسی و مشکل را حل می‌کند. کنترل اتصال همیشه در اختیار شماست.",
   },
   {
-    q: "آیا پشتیبانی تلفنی برای کسب‌وکارها ارائه می‌شود؟",
-    a: "بله. خط اختصاصی، کارشناس آموزش‌دیده روی محصول شما و گزارش تماس‌ها بخشی از سرویس پشتیبانی تلفنی سازمانی هلپینو ۲۴ است.",
+    q: "آیا هلپینو ۲۴ از کامپیوتر و لپ‌تاپ پشتیبانی می‌کند؟",
+    a: "بله. رفع مشکلات ویندوز، کندی سیستم، نصب و تنظیم نرم‌افزارها و خطاهای رایج کامپیوتر و لپ‌تاپ بخشی از خدمات پشتیبانی فنی هلپینو ۲۴ است.",
   },
   {
-    q: "آیا هلپینو ۲۴ از شبکه‌های اجتماعی پشتیبانی می‌کند؟",
-    a: "بله. پشتیبانی چندکاناله شامل واتساپ، تلگرام، اینستاگرام، چت آنلاین سایت، ایمیل و سیستم تیکت است و همه در یک داشبورد یکپارچه مدیریت می‌شود.",
+    q: "آیا پشتیبانی Android و iPhone ارائه می‌شود؟",
+    a: "بله. پشتیبانی تخصصی اندروید (حساب گوگل، به‌روزرسانی، اپلیکیشن‌ها) و پشتیبانی iPhone و Apple (Apple ID، iCloud، تنظیمات iOS) ارائه می‌شود.",
   },
   {
-    q: "هزینه خدمات مرکز تماس چگونه محاسبه می‌شود؟",
-    a: "هزینه بر اساس حجم تماس و پیام، تعداد کارشناس اختصاصی، ساعات پوشش و سطح خدمات فنی محاسبه می‌شود. پس از یک جلسه مشاوره رایگان، پلن متناسب پیشنهاد می‌شود.",
+    q: "آیا خدمات پشتیبانی برای کسب‌وکارها ارائه می‌شود؟",
+    a: "بله. کسب‌وکارها، استارتاپ‌ها و فروشگاه‌های اینترنتی می‌توانند از خط اختصاصی، کارشناس آموزش‌دیده روی محصول و گزارش عملکرد ماهانه هلپینو ۲۴ استفاده کنند.",
   },
+  {
+    q: "چگونه می‌توان درخواست پشتیبانی ثبت کرد؟",
+    a: "کافی است فرم درخواست پشتیبانی را تکمیل کنید یا با مرکز تماس هلپینو ۲۴ تماس بگیرید؛ درخواست ثبت می‌شود و کارشناس مربوطه در کوتاه‌ترین زمان با شما ارتباط می‌گیرد.",
+  },
+
 ];
 
 export const Route = createFileRoute("/")({
@@ -190,12 +197,14 @@ function Cta({
 
 function Home() {
   return (
-    <div className="overflow-x-hidden bg-background text-foreground">
+    <div id="top" className="overflow-x-hidden bg-background text-foreground">
       <Header />
       <main>
         <Hero />
         <Trust />
         <Intro />
+        <ServicesSection />
+
         <CallCenter />
         <MultiChannel />
         <TechSupport />
@@ -215,12 +224,15 @@ function Home() {
 }
 
 const nav = [
+  { label: "خانه", href: "#top" },
+  { label: "خدمات", href: "#services" },
   { label: "مرکز تماس", href: "#call-center" },
   { label: "پشتیبانی فنی", href: "#technical" },
-  { label: "کسب‌وکارها", href: "#business" },
-  { label: "فرایند کار", href: "#process" },
-  { label: "سوالات", href: "#faq" },
+  { label: "پشتیبانی کسب‌وکارها", href: "#business" },
+  { label: "درباره ما", href: "#about" },
+  { label: "تماس با ما", href: "#contact" },
 ];
+
 
 function Header() {
   return (
@@ -254,15 +266,31 @@ function Header() {
           </nav>
           <a
             href="#contact"
-            className="inline-flex shrink-0 items-center gap-2 rounded-2xl px-5 py-2.5 text-sm font-bold text-primary-foreground shadow-[var(--shadow-float)] transition-transform hover:-translate-y-0.5 surface-primary"
+            className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-2xl px-5 py-2.5 text-sm font-bold text-primary-foreground shadow-[var(--shadow-float)] transition-transform hover:-translate-y-0.5 surface-primary"
           >
             <Phone className="size-4" />
             <span className="hidden sm:inline">درخواست پشتیبانی</span>
-            <span className="sm:hidden">تماس</span>
+            <span className="sm:hidden">پشتیبانی</span>
           </a>
         </div>
       </div>
+
+      <nav
+        aria-label="منوی موبایل"
+        className="flex gap-1 overflow-x-auto border-t border-border/60 px-4 py-2 lg:hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
+        {nav.map((n) => (
+          <a
+            key={n.href}
+            href={n.href}
+            className="inline-flex min-h-10 shrink-0 items-center rounded-xl bg-secondary/60 px-3.5 text-[13px] font-semibold text-secondary-foreground"
+          >
+            {n.label}
+          </a>
+        ))}
+      </nav>
     </header>
+
   );
 }
 
@@ -410,7 +438,7 @@ function Trust() {
 
 function Intro() {
   return (
-    <section className="py-20 sm:py-24">
+    <section id="about" className="py-20 sm:py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2">
         <Reveal>
           <span className="inline-block rounded-full glass px-4 py-1.5 text-xs font-semibold text-primary">
@@ -904,13 +932,16 @@ function Industries() {
 }
 
 const kpis = [
-  { t: "Live Calls", fa: "تماس‌های زنده", v: 128, s: "" },
+  { t: "Active Calls", fa: "تماس‌های در حال مکالمه", v: 128, s: "" },
+  { t: "Waiting Calls", fa: "تماس‌های در صف انتظار", v: 7, s: "" },
   { t: "Active Agents", fa: "کارشناسان فعال", v: 64, s: "" },
-  { t: "Tickets", fa: "تیکت‌های امروز", v: 942, s: "" },
-  { t: "Response Time", fa: "زمان پاسخ (ثانیه)", v: 27, s: "" },
+  { t: "Average Response Time", fa: "میانگین زمان پاسخ (ثانیه)", v: 27, s: "" },
+  { t: "Open Tickets", fa: "تیکت‌های باز", v: 86, s: "" },
+  { t: "Resolved Tickets", fa: "تیکت‌های حل‌شده امروز", v: 942, s: "" },
+  { t: "Resolved Requests", fa: "درخواست‌های حل‌شده (ماه)", v: 15400, s: "+" },
   { t: "Customer Satisfaction", fa: "رضایت مشتری", v: 98, s: "٪" },
-  { t: "Resolved Requests", fa: "درخواست‌های حل‌شده", v: 15400, s: "+" },
 ];
+
 
 function DashboardTech() {
   return (
@@ -921,7 +952,7 @@ function DashboardTech() {
           dark
           overline="تکنولوژی"
           title="داشبورد زنده مرکز تماس هلپینو ۲۴"
-          desc="عملکرد تیم پشتیبانی شما لحظه‌به‌لحظه اندازه‌گیری و گزارش می‌شود."
+          desc="نمونه‌ای از داشبورد پایش عملکرد (Demo UI) — اعداد نمایشی هستند و صرفاً برای معرفی قابلیت‌های گزارش‌گیری آورده شده‌اند."
         />
         <div className="mt-14 grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
           <Reveal>
@@ -1085,20 +1116,40 @@ function FinalCta() {
   );
 }
 
-const footerCols = [
+const footerCols: { t: string; links: { l: string; slug?: string }[] }[] = [
   {
     t: "خدمات",
-    links: ["مرکز تماس", "پشتیبانی تلفنی", "پشتیبانی آنلاین", "پشتیبانی فنی"],
+    links: [
+      { l: "مرکز تماس و کال سنتر", slug: "call-center" },
+      { l: "پشتیبانی مشتریان", slug: "customer-support" },
+      { l: "پشتیبانی کامپیوتر و لپ‌تاپ", slug: "computer-support" },
+      { l: "پشتیبانی موبایل", slug: "mobile-support" },
+      { l: "پشتیبانی Android", slug: "android-support" },
+      { l: "پشتیبانی iPhone و Apple", slug: "iphone-support" },
+    ],
   },
   {
-    t: "کسب‌وکارها",
-    links: ["برون‌سپاری مرکز تماس", "پشتیبانی کسب‌وکارها", "پشتیبانی از راه دور", "مدیریت تیکت"],
+    t: "پشتیبانی تخصصی",
+    links: [
+      { l: "پشتیبانی از راه دور", slug: "remote-support" },
+      { l: "پشتیبانی شبکه و اینترنت", slug: "network-support" },
+      { l: "پشتیبانی شبکه‌های اجتماعی", slug: "social-media-support" },
+      { l: "پشتیبانی وب‌سایت", slug: "website-support" },
+      { l: "پشتیبانی دیجیتال", slug: "digital-support" },
+      { l: "پشتیبانی کسب‌وکارها", slug: "business-support" },
+    ],
   },
   {
     t: "هلپینو ۲۴",
-    links: ["درباره هلپینو ۲۴", "تماس با ما", "حریم خصوصی", "قوانین و مقررات"],
+    links: [
+      { l: "درباره هلپینو ۲۴" },
+      { l: "تماس با ما" },
+      { l: "حریم خصوصی" },
+      { l: "قوانین و مقررات" },
+    ],
   },
 ];
+
 
 function Footer() {
   return (
@@ -1125,17 +1176,28 @@ function Footer() {
             <nav key={c.t} aria-label={c.t}>
               <h3 className="text-sm font-extrabold">{c.t}</h3>
               <ul className="mt-4 space-y-3">
-                {c.links.map((l) => (
-                  <li key={l}>
-                    <a
-                      href="#contact"
-                      className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                    >
-                      {l}
-                    </a>
+                {c.links.map((item) => (
+                  <li key={item.l}>
+                    {item.slug ? (
+                      <Link
+                        to="/services/$slug"
+                        params={{ slug: item.slug }}
+                        className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        {item.l}
+                      </Link>
+                    ) : (
+                      <a
+                        href="#contact"
+                        className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        {item.l}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
+
             </nav>
           ))}
         </div>
