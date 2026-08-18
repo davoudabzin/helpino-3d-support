@@ -261,15 +261,31 @@ function Header() {
           </nav>
           <a
             href="#contact"
-            className="inline-flex shrink-0 items-center gap-2 rounded-2xl px-5 py-2.5 text-sm font-bold text-primary-foreground shadow-[var(--shadow-float)] transition-transform hover:-translate-y-0.5 surface-primary"
+            className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-2xl px-5 py-2.5 text-sm font-bold text-primary-foreground shadow-[var(--shadow-float)] transition-transform hover:-translate-y-0.5 surface-primary"
           >
             <Phone className="size-4" />
             <span className="hidden sm:inline">درخواست پشتیبانی</span>
-            <span className="sm:hidden">تماس</span>
+            <span className="sm:hidden">پشتیبانی</span>
           </a>
         </div>
       </div>
+
+      <nav
+        aria-label="منوی موبایل"
+        className="flex gap-1 overflow-x-auto border-t border-border/60 px-4 py-2 lg:hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
+        {nav.map((n) => (
+          <a
+            key={n.href}
+            href={n.href}
+            className="inline-flex min-h-10 shrink-0 items-center rounded-xl bg-secondary/60 px-3.5 text-[13px] font-semibold text-secondary-foreground"
+          >
+            {n.label}
+          </a>
+        ))}
+      </nav>
     </header>
+
   );
 }
 
