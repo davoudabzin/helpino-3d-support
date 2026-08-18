@@ -1176,17 +1176,28 @@ function Footer() {
             <nav key={c.t} aria-label={c.t}>
               <h3 className="text-sm font-extrabold">{c.t}</h3>
               <ul className="mt-4 space-y-3">
-                {c.links.map((l) => (
-                  <li key={l}>
-                    <a
-                      href="#contact"
-                      className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                    >
-                      {l}
-                    </a>
+                {c.links.map((item) => (
+                  <li key={item.l}>
+                    {item.slug ? (
+                      <Link
+                        to="/services/$slug"
+                        params={{ slug: item.slug }}
+                        className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        {item.l}
+                      </Link>
+                    ) : (
+                      <a
+                        href="#contact"
+                        className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        {item.l}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
+
             </nav>
           ))}
         </div>
