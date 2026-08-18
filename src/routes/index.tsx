@@ -6,6 +6,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Reveal, CountUp } from "@/components/site/reveal";
+import { ServicesSection } from "@/components/site/services-section";
+
 import heroImg from "@/assets/hero-callcenter.png";
 import callCenterImg from "@/assets/callcenter-scene.png";
 import techImg from "@/assets/tech-support.png";
