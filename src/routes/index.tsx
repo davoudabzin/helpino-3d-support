@@ -1116,20 +1116,40 @@ function FinalCta() {
   );
 }
 
-const footerCols = [
+const footerCols: { t: string; links: { l: string; slug?: string }[] }[] = [
   {
     t: "خدمات",
-    links: ["مرکز تماس", "پشتیبانی تلفنی", "پشتیبانی آنلاین", "پشتیبانی فنی"],
+    links: [
+      { l: "مرکز تماس و کال سنتر", slug: "call-center" },
+      { l: "پشتیبانی مشتریان", slug: "customer-support" },
+      { l: "پشتیبانی کامپیوتر و لپ‌تاپ", slug: "computer-support" },
+      { l: "پشتیبانی موبایل", slug: "mobile-support" },
+      { l: "پشتیبانی Android", slug: "android-support" },
+      { l: "پشتیبانی iPhone و Apple", slug: "iphone-support" },
+    ],
   },
   {
-    t: "کسب‌وکارها",
-    links: ["برون‌سپاری مرکز تماس", "پشتیبانی کسب‌وکارها", "پشتیبانی از راه دور", "مدیریت تیکت"],
+    t: "پشتیبانی تخصصی",
+    links: [
+      { l: "پشتیبانی از راه دور", slug: "remote-support" },
+      { l: "پشتیبانی شبکه و اینترنت", slug: "network-support" },
+      { l: "پشتیبانی شبکه‌های اجتماعی", slug: "social-media-support" },
+      { l: "پشتیبانی وب‌سایت", slug: "website-support" },
+      { l: "پشتیبانی دیجیتال", slug: "digital-support" },
+      { l: "پشتیبانی کسب‌وکارها", slug: "business-support" },
+    ],
   },
   {
     t: "هلپینو ۲۴",
-    links: ["درباره هلپینو ۲۴", "تماس با ما", "حریم خصوصی", "قوانین و مقررات"],
+    links: [
+      { l: "درباره هلپینو ۲۴" },
+      { l: "تماس با ما" },
+      { l: "حریم خصوصی" },
+      { l: "قوانین و مقررات" },
+    ],
   },
 ];
+
 
 function Footer() {
   return (
